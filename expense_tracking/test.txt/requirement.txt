@@ -6,3 +6,4 @@ mysql-connecter-python==9.4.0
 requests==2.23.3
 uvicorn==0.35.0
 pydantic==2.11.7
+os==2.9.0
