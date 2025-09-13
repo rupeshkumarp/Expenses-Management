@@ -1,1 +1,14 @@
-2025-09-12 11:43:19,671 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-08-01 end: 2024-08-05
+2025-09-13 11:25:05,701 - db_helper - INFO - fetch_expenses_for_month called with 2024-08
+2025-09-13 11:25:14,081 - db_helper - INFO - fetch_expenses_for_month called with 2024-08
+2025-09-13 11:25:40,877 - db_helper - INFO - fetch_expenses_for_month called with 2024-08
+2025-09-13 11:26:59,289 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-07-01 end: 2024-08-01
+2025-09-13 11:27:40,699 - db_helper - INFO - fetch_expenses_for_month called with 2024-08
+2025-09-13 11:28:17,181 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-07-01 end: 2024-08-01
+2025-09-13 11:28:58,033 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-08-01 end: 2024-09-01
+2025-09-13 11:29:25,229 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-08-09 end: 2024-09-09
+2025-09-13 11:30:02,391 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-08-09 end: 2024-09-09
+2025-09-13 11:30:12,037 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-08-09 end: 2024-09-09
+2025-09-13 11:30:46,056 - db_helper - INFO - fetch_expense_fro_category called with start: 2024-08-09 end: 2024-09-09
+2025-09-13 11:33:53,398 - db_helper - INFO - fetch_expenses_for_month called with year: 2024-08-09 month: 2024-09-09
+2025-09-13 11:38:14,359 - db_helper - INFO - fetch_expenses_for_month called with year: 2024-08-09 month: 2024-09-09
+2025-09-13 11:39:49,368 - db_helper - INFO - fetch_expenses_for_month called with year: 2024-08-09 month: 2024-09-09

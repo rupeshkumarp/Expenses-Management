@@ -63,11 +63,31 @@ def fetch_particular_category(category):
         expenses = cursor.fetchall()
         return expenses
 
+def fetch_expenses_for_month(date_from, date_to):
+    logger.info(f"fetch_expenses_for_month called with from: {date_from} to: {date_to}")
+    with get_db_cursor() as cursor:
+        query = """
+            SELECT DATE_FORMAT(expense_date, '%Y-%m') AS month, 
+                   SUM(amount) AS total_amount
+            FROM expenses
+            WHERE expense_date BETWEEN %s AND %s
+            GROUP BY DATE_FORMAT(expense_date, '%Y-%m')
+            ORDER BY month
+        """
+        cursor.execute(query, (date_from, date_to))
+        expenses = cursor.fetchall()
+        return expenses
 
-# if __name__ == '__main__':
+
+
+if __name__ == '__main__':
+    # data=fetch_expenses_for_month(2024,8)
+    # for row in data:
+    #     print(row)
     # delete_db_cursor(expense_date=('2023-08-23'))
-    # fet=fetch_expense_summary('2024-08-01','2024-08-05')
- 
+    fet=fetch_expenses_for_month('2024-08-09','2024-09-09')
+    for row in fet:
+        print(row)  
     # insert_db_cursor('2023-08-23',500,'Food','Miscellaneous')
     # expenses= fetch_expense_for_day("2024-08-05")
     # for expense in expenses:

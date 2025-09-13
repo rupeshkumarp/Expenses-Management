@@ -15,6 +15,9 @@ class date_Range(BaseModel):
     expense_date_from: date
     expense_date_to: date
 
+class ExpenseMonthSummary(BaseModel):
+    month: str
+    total_amount: float
 
 
 @app.get('/expenses/{expense_date}', response_model=List[Expense])
@@ -52,3 +55,11 @@ def get_analytics(daterange:date_Range):
             }
         
     return breakdown
+
+
+@app.get("/expenses_by_month/{date_from}/{date_to}", response_model=List[ExpenseMonthSummary])
+def get_expenses_by_month(date_from: date, date_to: date):
+    expenses = db_helper.fetch_expenses_for_month(date_from, date_to)
+    if not expenses:
+        raise HTTPException(status_code=404, detail="No data found")
+    return expenses
